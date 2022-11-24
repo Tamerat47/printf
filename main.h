@@ -1,7 +1,7 @@
 #ifndef main_H
 #define main_H
 #include <stdarg.h>
-
+#include <stdio.h>
 /**
   * struct specifiers - Struct specifiers
   * @specifier: The conversion specifier
@@ -12,7 +12,7 @@ typedef struct specifiers
 	char *specifier;
 	int (*f)(va_list args);
 } spc_dt;
-
+int _strlen(const char *);
 int _write(char c);
 int _printf(const char *format, ...);
 int _print_a_char(va_list args);
