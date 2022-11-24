@@ -1,7 +1,6 @@
 #ifndef main_H
 #define main_H
 #include <stdarg.h>
-#include <stdio.h>
 /**
   * struct specifiers - Struct specifiers
   * @specifier: The conversion specifier
