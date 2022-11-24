@@ -10,15 +10,21 @@
  */
 int _printf(const char *format, ...)
 {
+	int size;
 	va_list args;
-	int length = 0;
 
 	if (format == NULL)
 		return (-1);
 
-	va_start(args, format);
+	size = _strlen(format);
+	if (size <= 0)
+		return (0);
 
-	length = _print_format(format, args);
+	va_start(args, format);
+	size = handler(format, args);
+
+	_putchar(-1);
 	va_end(args);
-	return (length);
+
+	return (size);
 }
